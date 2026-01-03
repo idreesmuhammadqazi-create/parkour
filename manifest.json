@@ -129,7 +129,6 @@
         "/game-source/box2d.wasm.js",
         "/game-source/gamebox.html",
         "/game-source/js-postload.js",
-        "/game-source/skin-price-mod.js",
         "/game-source/c3-loader.js"
     ]
 }

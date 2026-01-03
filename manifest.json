@@ -8,6 +8,7 @@
         "128": "icon/128.png"
     },
     "offline_enabled": true,
+    "content_security_policy": "script-src 'self' 'unsafe-eval' 'wasm-unsafe-eval'; object-src 'self'",
     "browser_action": {
         "default_title": "__MSG_extensionActionTitle__"
     },
@@ -116,12 +117,18 @@
         "/game-source/scripts/dispatchworker.egjdata",
         "/game-source/scripts/jobworker.egjdata",
         "/game-source/scripts/main.egjdata",
+        "/game-source/scripts/main-nomodule.js",
+        "/game-source/scripts/c3main-nomodule.js",
         "/game-source/scripts/modernjscheck.egjdata",
         "/game-source/scripts/offlineclient.egjdata",
         "/game-source/scripts/register-sw.egjdata",
         "/game-source/scripts/supportcheck.egjdata",
         "/game-source/scripts/v2/poki-sdk.egjdata",
         "/game-source/scripts/v2.313.0/poki-sdk-core-v2.313.0.egjdata",
-        "/game-source/style.css"
+        "/game-source/style.css",
+        "/game-source/box2d.wasm.js",
+        "/game-source/gamebox.html",
+        "/game-source/js-postload.js",
+        "/game-source/c3-loader.js"
     ]
 }

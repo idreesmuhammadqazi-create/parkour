@@ -122,6 +122,9 @@
         "/game-source/scripts/supportcheck.egjdata",
         "/game-source/scripts/v2/poki-sdk.egjdata",
         "/game-source/scripts/v2.313.0/poki-sdk-core-v2.313.0.egjdata",
-        "/game-source/style.css"
+        "/game-source/style.css",
+        "/game-source/box2d.wasm.js",
+        "/game-source/gamebox.html",
+        "/game-source/js-postload.js"
     ]
 }

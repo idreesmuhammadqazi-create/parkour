@@ -125,6 +125,7 @@
         "/game-source/style.css",
         "/game-source/box2d.wasm.js",
         "/game-source/gamebox.html",
-        "/game-source/js-postload.js"
+        "/game-source/js-postload.js",
+        "/game-source/c3-loader.js"
     ]
 }

@@ -1,17 +1,4 @@
-/**
- * Firefox-Compatible Game Script
- * Converted from Chrome to Firefox
- * 
- * Key changes:
- * - Uses browser.* APIs instead of chrome.*
- * - Includes browser polyfill for cross-browser compatibility
- * - All chrome.i18n, chrome.runtime, chrome.tabs calls updated
- */
-
 import info from '/info.mjs';
-
-// Use browser API (with fallback to chrome for compatibility)
-const api = typeof browser !== 'undefined' ? browser : chrome;
 
 const domain = info.domain;
 
@@ -30,49 +17,39 @@ function handleInfo() {
     const gamePlayBox = document.getElementById('game-play-box');
     const guide = document.getElementById('guide');
     const loading = document.getElementById('loading');
-    
-    // Get extension title from i18n
-    const extensionTitle = api.i18n.getMessage('extensionGameTitle');
-    document.title = extensionTitle;
-    document.getElementById('game-left-title').textContent = extensionTitle;
-    
+    document.title = chrome.i18n.getMessage('extensionGameTitle');
+    document.getElementById('game-left-title').textContent = chrome.i18n.getMessage('extensionGameTitle');
     const gameFrame = document.getElementById('gameFrame');
     setTimeout(() => {
         window.addEventListener('message', async (event) => {
             if (event.data.type === 'game-loaded') {
                 loading.remove();
             }
-        });
-        
-        // Set iframe source with extension ID
-        gameFrame.src = `${info.iframeSrc}?id=${api.runtime.id}&n=${info.packageName}`;
+        })
+        gameFrame.src = `${info.iframeSrc}?id=${chrome.runtime.id}&n=${info.packageName}`;
     }, 0);
-    
-    document.getElementById('game-title').textContent = api.i18n.getMessage('extensionName');
-    document.getElementById('guide-item-text').textContent = api.i18n.getMessage('pinGuideText');
-    document.getElementById('guide-item-done-button').textContent = api.i18n.getMessage('pinGuideDone');
+    document.getElementById('game-title').textContent = chrome.i18n.getMessage('extensionName');
+    document.getElementById('guide-item-text').textContent = chrome.i18n.getMessage('pinGuideText');
+    document.getElementById('guide-item-done-button').textContent = chrome.i18n.getMessage('pinGuideDone');
 
-    // Handle installation time tracking
+
     const installTime = localStorage.getItem('installTime');
     if (!installTime) {
         localStorage.setItem('installTime', Date.now());
     }
 
-    // Handle guide display
     const hasShownGuide = localStorage.getItem('hasShownGuide');
     if (!hasShownGuide) {
         guide.style.display = 'block';
         localStorage.setItem('hasShownGuide', 'true');
     }
 
-    // Hide guide when clicking outside
     document.addEventListener('click', (event) => {
         if (!guide.contains(event.target)) {
             guide.remove();
         }
     });
 
-    // Hide guide when clicking done button
     document.getElementById('guide-item-done-button').addEventListener('click', () => {
         guide.remove();
     });
@@ -82,16 +59,10 @@ function handleGameItemMore() {
     const gameItemMore = document.getElementById('game-item-more');
     const gameItemMoreContent = document.getElementById('game-item-more-content');
     const gameItemMoreIcon = document.querySelector('.game-item-more-icon');
-    
-    gameItemMoreContent.textContent = api.i18n.getMessage('playMoreGames');
-    
+    gameItemMoreContent.textContent = chrome.i18n.getMessage('playMoreGames');
     gameItemMore.addEventListener('click', () => {
-        api.tabs.create({
-            url: `${domain}/more-games?i=${api.runtime.id}&n=${api.i18n.getMessage('extensionGameTitle')}&s=${info.symbolStr}&c=${info.category}`
-        });
+        chrome.tabs.create({ url: `${domain}/more-games?i=${chrome.runtime.id}&n=${chrome.i18n.getMessage('extensionGameTitle')}&s=${info.symbolStr}&c=${info.category}` });
     });
-    
-    // Animate game icon
     let iconIndex = 0;
     const iconArr = ['0.png', '1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png'];
     setInterval(() => {
@@ -107,6 +78,7 @@ function handleGameItemMore() {
     }, 4000);
 }
 
+
 async function setRecommendGames() {
     await sleep(10);
 
@@ -114,7 +86,6 @@ async function setRecommendGames() {
     if (installTime && Date.now() - installTime < 1000 * 60 * 60 * 24 * 1) {
         return;
     }
-    
     try {
         const response = await fetch('https://game-extension-api.offlinegames.fun/recommend/');
         const data = await response.json();
@@ -135,9 +106,130 @@ async function setRecommendGames() {
             recommendBox2.style.display = 'block';
         }
     } catch (err) {
-        console.error('Error loading recommended games:', err);
+
     }
 }
+
+// function handleGames() {
+//     const gameContain = document.querySelector('.game-contain');
+//     const gamePlayBox = document.getElementById('game-play-box');
+//     for (let i = 0; i < 2; i++) {
+//         const game = document.createElement('div');
+//         game.className = `game-item game-item-small`;
+//         game.innerHTML = `
+//             <a href="" title="">
+//                 <img alt="" loading="lazy">
+//                 <div class="game-item-title">
+//                     <span class="game-item-title-text"></span>
+//                 </div>
+//             </a>
+//         `;
+//         gameContain.insertBefore(game, gamePlayBox);
+//     }
+//     for (let i = 0; i < 80; i++) {
+//         const game = document.createElement('div');
+//         game.className = `game-item game-item-small`;
+//         game.innerHTML = `
+//             <a href="" title="">
+//                 <img src="" alt="" loading="lazy">
+//                 <div class="game-item-title">
+//                     <span class="game-item-title-text"></span>
+//                 </div>
+//             </a>
+//         `;
+//         gameContain.appendChild(game);
+//     }
+//     gamePlayBox.style.opacity = '1';
+// }
+
+// function getMoreGames() {
+//     const games = JSON.parse(localStorage.getItem('games'));
+//     if (games && games.length > 0) {
+//         setGames(games);
+//     }
+//     const symbolStr = info.symbolStr;
+//     const url = `${domain}/api/recommend/${symbolStr}`;
+//     fetch(url).then(res => res.json()).then(data => {
+//         //console.log(data);
+//         if (data.code === 0) {
+//             const games = data.data;
+//             setGames(games);
+//             localStorage.setItem('games', JSON.stringify(games));
+//         }
+//     });
+// }
+
+// function transformGameIcon(game) {
+//     if (game.size === 'small') {
+//         return game.icon + '-128.png';
+//     } else if (game.size === 'medium') {
+//         return game.icon + '-300.png';
+//     } else if (game.size === 'large') {
+//         return game.icon + '-512.png';
+//     } else if (game.size === 'wide') {
+//         return game.thumbnail + '-300.png';
+//     } else if (game.size === 'wide-large') {
+//         return game.thumbnail + '-512.png';
+//     } else if (game.size === 'narrow') {
+//         return game.thumbnail + '-128.png';
+//     }
+// }
+
+// function setGames(games) {
+//     const gameItems = document.querySelectorAll('.game-item');
+//     // 更新现有的 game-item 元素
+//     gameItems.forEach((item, index) => {
+//         if (index < games.length) {
+//             const game = games[index];
+//             const link = item.querySelector('a');
+//             const img = item.querySelector('img');
+//             const titleText = item.querySelector('.game-item-title-text');
+
+//             if (index < 50) {
+//                 item.className = `game-item game-item-small`;
+//             } else {
+//                 item.className = `game-item game-item-small`;
+//             }
+
+//             link.href = `${domain}/game/${game.slug}`;
+//             link.target = '_blank';
+//             link.title = game.title;
+//             if (game.size === 'small') {
+//                 img.src = game.icon + '-128.png';
+//             } else if (game.size === 'medium') {
+//                 img.src = game.icon + '-256.png';
+//             } else if (game.size === 'large') {
+//                 img.src = game.icon + '-512.png';
+//             }
+
+
+//             img.alt = game.title;
+//             titleText.textContent = game.title;
+//         } else {
+//             // 移除多余的 game-item
+//             item.remove();
+//         }
+//     });
+
+//     // 如果数据比现有元素多,需要添加新的元素
+//     const gameContain = document.querySelector('.game-contain');
+//     //const gamePlayBox = document.getElementById('game-play-box');
+
+//     for (let i = gameItems.length; i < games.length; i++) {
+//         const game = games[i];
+//         const gameElement = document.createElement('div');
+//         gameElement.className = `game-item game-item-${game.size}`;
+//         gameElement.innerHTML = `
+//         <a href="${domain}/game/${game.slug}" target="_blank" title="${game.title}">
+//             <img src="${game.icon + '-128.png'}" alt="${game.title}" loading="lazy">
+//             <div class="game-item-title">
+//                 <span class="game-item-title-text">${game.title}</span>
+//             </div>
+//         </a>
+//         `;
+//         gameContain.appendChild(gameElement);
+//     }
+// }
 
 function handleFullScreen() {
     const webFullIcon = document.getElementById('game-play-icon-web-full');
@@ -156,7 +248,6 @@ function handleFullScreen() {
             webFullIcon.style.display = 'none';
         }
     });
-    
     document.addEventListener('fullscreenchange', () => {
         if (document.fullscreenElement) {
             fullScreenIcon.style.backgroundImage = 'url("/images/unfull.png")';
@@ -171,6 +262,7 @@ function handleFullScreen() {
         gameFrame.focus();
     });
 
+
     function webFull() {
         const content = document.querySelector('.game-play-box');
         content.classList.add('game-play-box-web-full');
@@ -180,7 +272,6 @@ function handleFullScreen() {
         gameItemMore.style.display = 'none';
         document.body.classList.add('web-full');
     }
-    
     function exitWebFull() {
         const content = document.querySelector('.game-play-box');
         content.classList.remove('game-play-box-web-full');

@@ -1,0 +1,23 @@
+{
+    "extensionName": {
+        "message": "Dreadhead Parkour Spiel - Meistere spannende Parkour-Herausforderungen!"
+    },
+    "extensionDescription": {
+        "message": "Meistere epische Parkour-Stunts in diesem aufregenden Browser-Platformer—spiele jederzeit und überall!"
+    },
+    "extensionActionTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "extensionGameTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "playMoreGames": {
+        "message": "Weitere Spiele spielen"
+    },
+    "pinGuideText": {
+        "message": "Heften Sie es einfach an, um dieses Spiel jederzeit zu spielen!"
+    },
+    "pinGuideDone": {
+        "message": "Fertig"
+    }
+}

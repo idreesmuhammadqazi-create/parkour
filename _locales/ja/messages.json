@@ -1,0 +1,23 @@
+{
+    "extensionName": {
+        "message": "Dreadhead Parkour ゲーム - スリリングなパルクールチャレンジをマスターしよう！"
+    },
+    "extensionDescription": {
+        "message": "このスリリングなブラウザプラットフォーマーで壮大なパルクールスタントをマスターしよう - いつでもどこでも遊べる！"
+    },
+    "extensionActionTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "extensionGameTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "playMoreGames": {
+        "message": "他のゲームをプレイ"
+    },
+    "pinGuideText": {
+        "message": "いつでもこのゲームをプレイするためにピン留めしてください！"
+    },
+    "pinGuideDone": {
+        "message": "完了"
+    }
+}

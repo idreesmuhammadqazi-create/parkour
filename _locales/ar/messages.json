@@ -1,0 +1,23 @@
+{
+    "extensionName": {
+        "message": "لعبة Dreadhead Parkour - اتقن تحديات باركور المثيرة!"
+    },
+    "extensionDescription": {
+        "message": "اتقن حركات باركور الملحمية في هذه اللعبة المثيرة على المتصفح - العب في أي وقت، من أي مكان!"
+    },
+    "extensionActionTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "extensionGameTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "playMoreGames": {
+        "message": "العب المزيد من الألعاب"
+    },
+    "pinGuideText": {
+        "message": "قم بتثبيته ليلعب هذه اللعبة في أي وقت!"
+    },
+    "pinGuideDone": {
+        "message": "تم"
+    }
+}

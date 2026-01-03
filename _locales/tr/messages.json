@@ -1,0 +1,23 @@
+{
+    "extensionName": {
+        "message": "Dreadhead Parkour Oyunu - Heyecan Verici Parkur Zorluklarını Masterla!"
+    },
+    "extensionDescription": {
+        "message": "Bu heyecan verici tarayıcı platform oyununda epik parkur hareketlerini ustala—her zaman, her yerde oyna!"
+    },
+    "extensionActionTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "extensionGameTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "playMoreGames": {
+        "message": "Daha Fazla Oyun Oyna"
+    },
+    "pinGuideText": {
+        "message": "Bu oyunu istediğin zaman oynamak için sadece sabitle!"
+    },
+    "pinGuideDone": {
+        "message": "Tamam"
+    }
+}

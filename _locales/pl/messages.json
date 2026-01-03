@@ -1,0 +1,23 @@
+{
+    "extensionName": {
+        "message": "Dreadhead Parkour Gra - Opanuj Ekscytujące Wyzwania Parkour!"
+    },
+    "extensionDescription": {
+        "message": "Opanuj epickie akrobacje parkour w tej ekscytującej platformówce—graj w dowolnym czasie i miejscu!"
+    },
+    "extensionActionTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "extensionGameTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "playMoreGames": {
+        "message": "Graj w więcej gier"
+    },
+    "pinGuideText": {
+        "message": "Przypnij to, aby grać w tę grę w dowolnym czasie!"
+    },
+    "pinGuideDone": {
+        "message": "Gotowe"
+    }
+}

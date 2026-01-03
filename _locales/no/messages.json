@@ -1,0 +1,23 @@
+{
+    "extensionName": {
+        "message": "Dreadhead Parkour Spill - Mester spennende parkourutfordringer!"
+    },
+    "extensionDescription": {
+        "message": "Mestre episke parkour-stunts i denne spennende nettplattformeren—spill når som helst, hvor som helst!"
+    },
+    "extensionActionTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "extensionGameTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "playMoreGames": {
+        "message": "Spill flere spill"
+    },
+    "pinGuideText": {
+        "message": "Bare fest det for å spille dette spillet når som helst!"
+    },
+    "pinGuideDone": {
+        "message": "Ferdig"
+    }
+}

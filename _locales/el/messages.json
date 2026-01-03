@@ -1,0 +1,23 @@
+{
+    "extensionName": {
+        "message": "Dreadhead Parkour Παιχνίδι - Κατακτήστε Συναρπαστικές Προκλήσεις Parkour!"
+    },
+    "extensionDescription": {
+        "message": "Κατακτήστε επικά stunts parkour σε αυτό το συναρπαστικό παιχνίδι για τον περιηγητή—παίξτε οποτεδήποτε, οπουδήποτε!"
+    },
+    "extensionActionTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "extensionGameTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "playMoreGames": {
+        "message": "Παίξτε Περισσότερα Παιχνίδια"
+    },
+    "pinGuideText": {
+        "message": "Απλά καρφώστε το για να παίξετε αυτό το παιχνίδι οποτεδήποτε!"
+    },
+    "pinGuideDone": {
+        "message": "Ολοκληρώθηκε"
+    }
+}

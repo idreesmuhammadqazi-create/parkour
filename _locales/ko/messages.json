@@ -1,0 +1,23 @@
+{
+    "extensionName": {
+        "message": "Dreadhead Parkour 게임 - 스릴 넘치는 파쿠르 도전 과제를 마스터하라!"
+    },
+    "extensionDescription": {
+        "message": "이 스릴 넘치는 브라우저 플랫폼에서 멋진 파쿠르 스턴트를 마스터하라—언제 어디서나 플레이하자!"
+    },
+    "extensionActionTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "extensionGameTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "playMoreGames": {
+        "message": "더 많은 게임을 플레이하세요"
+    },
+    "pinGuideText": {
+        "message": "게임을 언제든지 플레이하려면 고정하세요!"
+    },
+    "pinGuideDone": {
+        "message": "완료"
+    }
+}

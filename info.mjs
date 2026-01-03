@@ -1,0 +1,1 @@
+export default {"domain":"https://offlinegames.fun","cspFixed":true,"iframeSrc":"https://dreadhead-parkour.codeplaymaster.com/dreadhead-parkour/gamebox.html","symbolStr":"YXRvLXBhZnItc2lsLWNzYQ","category":"Action","packageName":"dreadhead-parkour","version":""};

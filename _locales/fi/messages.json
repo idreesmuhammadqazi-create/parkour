@@ -1,0 +1,23 @@
+{
+    "extensionName": {
+        "message": "Dreadhead Parkour - Hallitse jännittäviä parkour-haasteita!"
+    },
+    "extensionDescription": {
+        "message": "Hallitse eeppisiä parkour-temppuja tässä jännittävässä selainpelissä—pelaa milloin vain, missä vain!"
+    },
+    "extensionActionTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "extensionGameTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "playMoreGames": {
+        "message": "Pelaa enemmän pelejä"
+    },
+    "pinGuideText": {
+        "message": "Kiinnitä tämä peli pelataksesi sitä milloin vain!"
+    },
+    "pinGuideDone": {
+        "message": "Valmis"
+    }
+}

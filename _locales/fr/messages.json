@@ -1,0 +1,23 @@
+{
+    "extensionName": {
+        "message": "Dreadhead Parkour Jeu - Maîtrisez des défis de parkour palpitants !"
+    },
+    "extensionDescription": {
+        "message": "Maîtrisez des cascades épiques dans ce jeu de plateforme passionnant—jouez à tout moment, n'importe où !"
+    },
+    "extensionActionTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "extensionGameTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "playMoreGames": {
+        "message": "Jouer à Plus de Jeux"
+    },
+    "pinGuideText": {
+        "message": "Epinglez-le pour jouer à ce jeu à tout moment !"
+    },
+    "pinGuideDone": {
+        "message": "Fait"
+    }
+}

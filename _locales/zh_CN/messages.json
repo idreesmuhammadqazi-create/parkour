@@ -1,0 +1,23 @@
+{
+    "extensionName": {
+        "message": "Dreadhead Parkour 游戏 - 精通刺激的跑酷挑战！"
+    },
+    "extensionDescription": {
+        "message": "在这个刺激的浏览器平台游戏中掌握史诗般的跑酷特技—随时随地畅玩！"
+    },
+    "extensionActionTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "extensionGameTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "playMoreGames": {
+        "message": "玩更多游戏"
+    },
+    "pinGuideText": {
+        "message": "只需固定它，随时随地玩这个游戏！"
+    },
+    "pinGuideDone": {
+        "message": "完成"
+    }
+}

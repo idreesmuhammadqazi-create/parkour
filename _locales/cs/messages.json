@@ -1,0 +1,23 @@
+{
+    "extensionName": {
+        "message": "Dreadhead Parkour Hra - Ovládejte vzrušující parkourové výzvy!"
+    },
+    "extensionDescription": {
+        "message": "Ovládejte epické parkourové kousky v této vzrušující plošinovce—hrajte kdykoli, kdekoli!"
+    },
+    "extensionActionTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "extensionGameTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "playMoreGames": {
+        "message": "Hrajte více her"
+    },
+    "pinGuideText": {
+        "message": "Jednoduše to připněte, abyste mohli tuto hru hrát kdykoli!"
+    },
+    "pinGuideDone": {
+        "message": "Hotovo"
+    }
+}

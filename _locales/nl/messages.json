@@ -1,0 +1,23 @@
+{
+    "extensionName": {
+        "message": "Dreadhead Parkour Game - Beheers Spannende Parkour Uitdagingen!"
+    },
+    "extensionDescription": {
+        "message": "Beheers epische parkour stunts in deze spannende browserplatformer—speel anytime, anywhere!"
+    },
+    "extensionActionTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "extensionGameTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "playMoreGames": {
+        "message": "Speel Meer Spellen"
+    },
+    "pinGuideText": {
+        "message": "Pin het gewoon om deze game op elk moment te spelen!"
+    },
+    "pinGuideDone": {
+        "message": "Klaar"
+    }
+}

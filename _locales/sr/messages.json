@@ -1,0 +1,23 @@
+{
+    "extensionName": {
+        "message": "Dreadhead Parkour igra - Savladajte uzbudljive parkour izazove!"
+    },
+    "extensionDescription": {
+        "message": "Savladajte epske parkour trikove u ovom uzbudljivom browser platformeru—igrajte bilo kada, bilo gde!"
+    },
+    "extensionActionTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "extensionGameTitle": {
+        "message": "Dreadhead Parkour"
+    },
+    "playMoreGames": {
+        "message": "Igrajte više igara"
+    },
+    "pinGuideText": {
+        "message": "Samo zakačite da biste igrali ovu igru bilo kada!"
+    },
+    "pinGuideDone": {
+        "message": "Završeno"
+    }
+}

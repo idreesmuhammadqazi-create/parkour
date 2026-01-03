@@ -116,6 +116,7 @@
         "/game-source/scripts/dispatchworker.egjdata",
         "/game-source/scripts/jobworker.egjdata",
         "/game-source/scripts/main.egjdata",
+        "/game-source/scripts/c3main-nomodule.js",
         "/game-source/scripts/modernjscheck.egjdata",
         "/game-source/scripts/offlineclient.egjdata",
         "/game-source/scripts/register-sw.egjdata",

@@ -12,23 +12,20 @@
         <canvas id="c3canvas" width="1280" height="720"></canvas>
     </div>
 
-    <!-- Load Construct 3 runtime scripts -->
+    <!-- Modern JS check and browser support check must run first -->
     <script src="scripts/modernjscheck.egjdata"></script>
     <script src="scripts/supportcheck.egjdata"></script>
-    <script src="scripts/c3main.egjdata"></script>
+
+    <!-- Main Construct 3 runtime loaded as ES6 module -->
+    <script type="module" src="scripts/c3main.egjdata"></script>
+
+    <!-- Additional scripts -->
     <script src="scripts/main.egjdata"></script>
     <script src="scripts/register-sw.egjdata"></script>
     <script src="scripts/offlineclient.egjdata"></script>
     <script src="scripts/dispatchworker.egjdata"></script>
     <script src="scripts/jobworker.egjdata"></script>
 
-    <!-- Post-load message for parent window -->
-    <script>
-        window.addEventListener('load', function() {
-            if (window.parent && window.parent !== window) {
-                window.parent.postMessage({type: 'game-loaded'}, '*');
-            }
-        });
-    </script>
+    <script src="js-postload.js"></script>
 </body>
 </html>

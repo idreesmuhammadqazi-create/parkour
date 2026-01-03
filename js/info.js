@@ -1,0 +1,1 @@
+var info = {"domain":"https://offlinegames.fun","cspFixed":true,"iframeSrc":"/game-source/gamebox.html","symbolStr":"YXRvLXBhZnItc2lsLWNzYQ","category":"Action","packageName":"dreadhead-parkour","version":""};

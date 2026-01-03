@@ -1,5 +1,3 @@
-import info from '/info.mjs';
-
 const domain = info.domain;
 
 function sleep(ms) {
@@ -17,8 +15,8 @@ function handleInfo() {
     const gamePlayBox = document.getElementById('game-play-box');
     const guide = document.getElementById('guide');
     const loading = document.getElementById('loading');
-    document.title = chrome.i18n.getMessage('extensionGameTitle');
-    document.getElementById('game-left-title').textContent = chrome.i18n.getMessage('extensionGameTitle');
+    document.title = browser.i18n.getMessage('extensionGameTitle');
+    document.getElementById('game-left-title').textContent = browser.i18n.getMessage('extensionGameTitle');
     const gameFrame = document.getElementById('gameFrame');
     setTimeout(() => {
         window.addEventListener('message', async (event) => {
@@ -26,11 +24,11 @@ function handleInfo() {
                 loading.remove();
             }
         })
-        gameFrame.src = `${info.iframeSrc}?id=${chrome.runtime.id}&n=${info.packageName}`;
+        gameFrame.src = `${info.iframeSrc}?id=${browser.runtime.id}&n=${info.packageName}`;
     }, 0);
-    document.getElementById('game-title').textContent = chrome.i18n.getMessage('extensionName');
-    document.getElementById('guide-item-text').textContent = chrome.i18n.getMessage('pinGuideText');
-    document.getElementById('guide-item-done-button').textContent = chrome.i18n.getMessage('pinGuideDone');
+    document.getElementById('game-title').textContent = browser.i18n.getMessage('extensionName');
+    document.getElementById('guide-item-text').textContent = browser.i18n.getMessage('pinGuideText');
+    document.getElementById('guide-item-done-button').textContent = browser.i18n.getMessage('pinGuideDone');
 
 
     const installTime = localStorage.getItem('installTime');
@@ -59,9 +57,9 @@ function handleGameItemMore() {
     const gameItemMore = document.getElementById('game-item-more');
     const gameItemMoreContent = document.getElementById('game-item-more-content');
     const gameItemMoreIcon = document.querySelector('.game-item-more-icon');
-    gameItemMoreContent.textContent = chrome.i18n.getMessage('playMoreGames');
+    gameItemMoreContent.textContent = browser.i18n.getMessage('playMoreGames');
     gameItemMore.addEventListener('click', () => {
-        chrome.tabs.create({ url: `${domain}/more-games?i=${chrome.runtime.id}&n=${chrome.i18n.getMessage('extensionGameTitle')}&s=${info.symbolStr}&c=${info.category}` });
+        browser.tabs.create({ url: `${domain}/more-games?i=${browser.runtime.id}&n=${browser.i18n.getMessage('extensionGameTitle')}&s=${info.symbolStr}&c=${info.category}` });
     });
     let iconIndex = 0;
     const iconArr = ['0.png', '1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png'];

@@ -2,22 +2,21 @@
 //     openPanelOnActionClick: true
 // }).catch((error) => console.error(error));
 
-import info from '/info.mjs';
-chrome.action.onClicked.addListener((tab) => {
-    chrome.tabs.create({
+browser.browserAction.onClicked.addListener((tab) => {
+    browser.tabs.create({
         url: 'game.html'
     });
 });
 
-chrome.runtime.setUninstallURL(`${info.domain}/uninstall?i=${chrome.runtime.id}&n=${chrome.i18n.getMessage('extensionGameTitle')}&s=${info.symbolStr}&c=${info.category}`);
+browser.runtime.setUninstallURL(`${info.domain}/uninstall?i=${browser.runtime.id}&n=${browser.i18n.getMessage('extensionGameTitle')}&s=${info.symbolStr}&c=${info.category}`);
 
-chrome.runtime.onInstalled.addListener((details) => {
+browser.runtime.onInstalled.addListener((details) => {
     if (details.reason === 'install') {
-        chrome.tabs.create({
-            url: `${info.domain}/install?i=${chrome.runtime.id}&n=${chrome.i18n.getMessage('extensionGameTitle')}&s=${info.symbolStr}&c=${info.category}`
+        browser.tabs.create({
+            url: `${info.domain}/install?i=${browser.runtime.id}&n=${browser.i18n.getMessage('extensionGameTitle')}&s=${info.symbolStr}&c=${info.category}`
         });
 
-        chrome.tabs.create({
+        browser.tabs.create({
             url: 'game.html'
         });
     }
